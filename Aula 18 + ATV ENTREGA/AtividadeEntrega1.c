@@ -10,19 +10,19 @@ void exibirMenu() {
 }
 
 
-    int soma (int a, int b) {
+    float soma (float a, float b) {
         return  a +  b;
     }
 
-    int subtrair (int a, int b) {
+    float subtrair (float a, float b) {
         return  a -  b;
     }
     
-    int multiplicar (int a, int b) {
+    float multiplicar (float a, float b) {
         return  a *  b;
     }
     
-    int dividir (int a, int b) {
+    float dividir (float a, float b) {
         return  a /  b;
     }
 
@@ -30,7 +30,7 @@ void exibirMenu() {
 {
     exibirMenu();
     int opcao=1;
-    int a, b;
+    float a, b;
     
     
     while (opcao != 0){
@@ -40,47 +40,47 @@ void exibirMenu() {
     switch(opcao)   {
         case 1:
             printf("Enforme o primeiro número: ");
-            scanf("%d",& a);
+            scanf("%f",& a);
             
             printf("Enforme o segundo número: ");
-            scanf("%d",& b);
+            scanf("%f",& b);
             
-            printf("Resultado: %d\n", soma(a, b));
+            printf("Resultado: %2.f\n", soma(a, b));
             continue;
             
         case 2:
             printf("Enforme o primeiro número: ");
-            scanf("%d",& a);
+            scanf("%f",& a);
             
             printf("Enforme o segundo número: ");
-            scanf("%d",& b);
+            scanf("%f",& b);
             
-            printf("Resultado: %d\n", subtrair(a, b));
+            printf("Resultado: %2.f\n", subtrair(a, b));
             continue;
             
         case 3:
             printf("Enforme o primeiro número: ");
-            scanf("%d",& a);
+            scanf("%f",& a);
             
             printf("Enforme o segundo número: ");
-            scanf("%d",& b);
+            scanf("%f",& b);
             
-            printf("Resultado: %d\n", multiplicar(a, b));
+            printf("Resultado: %2.f\n", multiplicar(a, b));
             continue;
             
         case 4:
             printf("Enforme o primeiro número: ");
-            scanf("%d", & a);
+            scanf("%f", & a);
             
             printf("Enforme o segundo número: ");
-            scanf("%d", & b);
+            scanf("%f", & b);
             
             if (a==0 || b==0){
                 printf("Informe um valor divisivel valido!\n");
                 break;
             }
             
-            printf("Resultado: %d\n", dividir(a, b));
+            printf("Resultado: %2.f\n", dividir(a, b));
             continue;
             
         case 5:
