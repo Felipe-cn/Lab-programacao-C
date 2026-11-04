@@ -3,34 +3,34 @@
 
 int main()
 {
-	char mensagem[30] = "Bem-vindo(a) ";
+	char mensagem[80] = "Bem-vindo(a), ";
 	char nome[50];
 	char perfil[10];
 	int letras = 0;
 	char copia[50];
 
-	printf("======== CADASTRO DE PRODUTOS =========\n\n");
+	printf("======== CADASTRO DE PRODUTOS =========\n");
 
 	printf("Digite seu nome: ");
 	fgets(nome, sizeof(nome), stdin);
-	printf("Quantidade de caracteres: %zu\n\n\n", strlen(nome));
+	printf("Quantidade de caracteres: %zu\n", strlen(nome));
 
 	printf("Vc é usuário ADMIN ou COMUM? ");
 	scanf("%10s",& perfil);
 
-	printf("======= DADOS CADASTRAIS =======\n\n\n");
+	printf("======= DADOS CADASTRAIS =======\n");
 
     strcpy(copia, nome);
 
 	if (strcmp(perfil, "ADMIN") == 0) {
 		printf("PERFIL: Administrador.\n\n");
-	}   else {
+	}   else if (perfil != "ADMIN" || perfil != "COMUM") {
 	        printf("Perfil diferente de administrador.\n");
-	        break;
+	        return 0;
 	    }
 
 	if (strcmp(perfil, "COMUM") == 0) {
-		printf("PERFIL: usuário comum.\n\n");
+		printf("PERFIL: usuário comum.");
 	}  
 
 	strcat(mensagem, nome);
