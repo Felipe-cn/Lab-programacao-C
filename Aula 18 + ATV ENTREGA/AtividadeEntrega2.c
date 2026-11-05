@@ -8,7 +8,7 @@ float maiorPreco(float a, float b){
         return b;
     }
     else {
-        printf("Valores iguais!!!");
+        printf("Valores iguais!!!\n");
         return a;
         
     }
